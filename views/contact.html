@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        main {
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        .main-header {
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .main-header__nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-header__item_list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-header_items {
+            margin: 0 1rem;
+            padding: 0;
+        }
+
+        .main-header_items a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .main-header_items a:hover,
+        .main-header_items a:active,
+        .main-header_items a.active {
+            color: #ecf0f1;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3498db; /* Highlight input on focus */
+        }
+
+        button {
+            font: inherit;
+            border: none;
+            color: #fff;
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover,
+        button:active {
+            background: linear-gradient(to right, #c0392b, #e74c3c);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav"> 
+            <ul class="main-header__item_list">
+                <li class="main-header_items"><a href="/admin/add-product">Add Product</a></li>
+                <li class="main-header_items"><a href="/shop">Shop</a></li>
+                <li class="main-header_items"><a class="active" href ="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action='/contact' method="POST">
+            <label for="name">Name:</label>
+            <input type="name" id="name">
+            <label for="mail">Email id:</label>
+            <input type="mail" id="mail">
+            <button type="submit">submit</button>
+
+        </form>
+    </main>
+
+    
+</body>
+</html>
